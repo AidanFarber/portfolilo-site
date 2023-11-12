@@ -23,7 +23,7 @@ function App() {
                 <h1 className='underline header'>About</h1> 
                 <div id='about-wrapper' className='grid'>
                     <p className='about-paragraph grid-item'>
-                        Hi! My name is <span className='accent-text-1'>Aidan Farber</span>, aspiring software engineer, creative problem solver, lifelong learner, and maker of terrible
+                        Hi! My name is <span className='accent-text-1'>Aidan Farber</span>, aspiring software engineer, creative problem solver, photographer, lifelong learner, and maker of terrible
                         puns. Throughout my life I've always found toiling over a puzzle, trying to find many different solutions and approaches,
                         incredibly alluring! This drive eventually led me down the path of programming, a puzzle that never ceases to inspire and amaze me. I love a 
                         challenge and will always try to take on difficult tasks, as they can prove to be the best teachers.
@@ -54,6 +54,16 @@ function App() {
                         "Computerphile", where they implemented something similar in Python. I wanted to rewrite it in C to see the perfomance
                         differences. My goal with the project is to now implement multithreading!'
                         techStack='C' link='https://www.google.com'/> 
+                        <ProjectCard title='Pomodoro CLI App'
+                        description='A simple Pomodoro timer I wrote for myself to use on MacOS. I work in Neovim mainly so I am very comfortable with working in the terminal!
+                                     Due to this, and also to keep my workflow centralized, I made a CLI Pomodoro App! It is written in JavaScript using Node to use it in the terminal.
+                                     It allows users to start a defined "break" and "work" timer or set a custom timer altogether!' 
+                        techStack='JavaScript, Node' link='https://github.com/AidanFarber/PomodoroCLI'/>
+                        <ProjectCard title='Portfolio Website'
+                        description="This very website! I wrote it using React as a base (which is admittedly a little overkill) but I wanted to use the opportunity to expand
+                                     my knowledge in a new framework. In the past I wrote a website using Flask (a Python web framework) but I've enjoyed working with React
+                                     much more. I'm hosting this site myself on Linux, using NGINX, but it's passed through a proxy service to keep my network safe!" 
+                        techStack='React, HTML, CSS, TypeScript' link='https://github.com/AidanFarber/portfolio-site'/>
                     </div>
                     <button className='button right-button'>&#10095;</button>
                 </div>
@@ -63,7 +73,7 @@ function App() {
         <footer className='flex centerH'>
             <p>Author: Aidan Farber</p>
             <p id='contact'>Contact: <a href="mailto:adevfarber@gmail.com">adevfarber@gmail.com</a></p>
-            <a className='centerH' target='_blank' href='https://github.com/AidanFarber'><img src={github} alt="GitHub" /></a>
+            <a className='centerH' target='_blank' href="https://github.com/AidanFarber"><img src={github} alt="GitHub"></img></a>
             <a className='centerH' target='_blank' href="https://www.linkedin.com/in/aidan-farber-109667162"><img src={linkedIn} alt="LinkedIn" /></a>
             <a className='centerH' target='_blank' href="https://www.instagram.com/aidan_farber"><img src={instagram} alt="Instagram"/></a>
         </footer>
