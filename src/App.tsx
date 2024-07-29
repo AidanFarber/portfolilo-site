@@ -1,22 +1,29 @@
 import { useState } from 'react'
-import './App.css'
-import 'projects.json'
+import './styles/index.css'
+import Navbar from './components/Navbar.tsx'
+
+// import 'projects.json'
 
 function App() {
-
   return (
     <>
+        <Navbar />
         <div className='content-container' id='landing-splash'>
-            <h1>Aidan Farber</h1>
-            <h3>Software Engineer</h3>
-            <hr/>
-            <p>
-                Hi! I'm Aidan, a software engineer based out of New Jersey! I'm an <span>ambitious, curious, and resilient</span> individual with a passion for
-                problem solving and exploring different aspects of technology.
-            </p>
+            <div className='intro-content'>
+                <h1>Aidan Farber</h1>
+                <h3>Software Engineer</h3>
+                <hr/>
+                <p>
+                    Hi! I'm Aidan, a software engineer based out of New Jersey! I'm an <span>ambitious, curious, and resilient</span> individual with a passion for
+                    problem solving and exploring different aspects of technology.
+                </p>
+            </div>
         </div>
+        <hr className='content-hr' />
         <div className='content-container' id='work-exp'>
+
         </div>
+        <hr className='content-hr' />
         <div className='content-container' id='projects'>
 
         </div>
