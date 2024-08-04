@@ -7,6 +7,14 @@ $lm-text-pri: hsl(77, 12%, 11%);
 $lm-text-sec: hsl(79, 12%, 27%);
 $lm-text-acc: hsl(357, 55%, 50%);
 
+$nav-hover: hsl(203,94%,100%);
+$nav-background: hsl(203, 94%, 39%);
+$nav-text: hsl(300, 00%, 90%);
+
+$dm-nav-hover: hsl(203,94%,67%);
+$dm-nav-background: hsl(77, 12%, 11%);
+$dm-nav-text: hsl(77, 1%, 75%);
+
 $dm-base: hsl(77, 12%, 11%);
 $dm-accent: hsl(203, 94%, 39%);
 $dm-text-pri: hsl(0, 0%, 93%);
@@ -16,9 +24,12 @@ $dm-text-sec: hsl(0, 0%, 85%);
 $fw-regular: 400;
 $fw-semibold: 500;
 $fw-bold: 700;
+$fs-header: 2.8em;
+$fs-sub-header: 2em;
 $fs-main: 1.8em;
 $fs-sub: 1.4em;
 $fs-note: 1.0em;
+$fs-nav-link: 2.0em;
 
 // Extensions
 
@@ -28,10 +39,16 @@ $fs-note: 1.0em;
   display: flex;
 }
 
+.inline-flexbox {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
 
 
 // Main CSS
-
 * {
   margin: 0;
   border: 0;
@@ -48,49 +65,111 @@ body {
   }
 }
 
-// Standard Horizontal navbar
-.navbar {
-  z-index: 500;
-  list-style-type: none;
-  overflow: hidden;
+#openNavButton {
   position: fixed;
+  line-height: 0;
+  font-size: 2.2rem;
+  margin-left: 8px;
+  margin-top: 8px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 35px;
+  height: 35px
+}
+
+#openNavButton:hover {
+  background-color: $nav-hover;
+  cursor: pointer;
+  color: $lm-base;
+}
+
+
+// TODO: add in the collapsed side navbar
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
   top: 0;
-  width: 100%;
-  background-color: $lm-accent;
+  left: 0;
+  background-color: $nav-background;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: .5s;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+  }
 
   li {
-    float: left;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  a {
+    padding: 16px 8px;
+    margin: 0px 32px;
+    text-decoration: none;
+    font-size: $fs-nav-link;
+    color: $nav-text;
+    display: block;
+    transition: .3s;
+  }
+
+  a:hover {
+    background-color: $nav-hover;
+    color: $nav-background;
+    transition: .3s
+  }
+
+  .closeNavButton {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 1.8em;
+    margin-left: 50px;
 
     a {
-      font-size: 2em;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
+      padding: 0;
+      border: none;
+      margin: 0;
     }
 
-    a:hover {
-      background-color: hsl(203, 94%, 25%);
-    }
   }
 }
 
-// TODO: add in the collapsed side navbar
+#main {
+  transition: margin-left .5s;
+}
 
 .content-container {
   height: 100vh;
+  width: 100%;
 }
 
 .content-hr {
   border-top: 1px solid grey;
 }
 
+.content-half {
+  flex: 0 0 50%;
+}
+
+// ---- Landing splash ----
+#landing-splash {
+  justify-content: center;
+}
+
 .intro-content {
-  position: absolute;
-  top: 45%;
-  padding-left: 20rem;
-  padding-right: 20rem;
+  align-content: center;
+
+  .info-box {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 
   hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -99,7 +178,7 @@ body {
 
   h1 {
     font-size: 4em;
-    text-shadow: 1px 1px 2px grey;
+    text-shadow: -1px 1px 2px grey;
     padding-bottom: 4px;
   }
 
@@ -117,3 +196,47 @@ body {
     color: $lm-text-acc;
   }
 }
+
+.intro-picture {
+  align-content: center;
+  justify-content: center;
+
+  img {
+    box-shadow: -5px 7px 6px grey;
+    display: block;
+    scale: 80%;
+    object-fit: none;
+    object-position: 45% 32%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 800px;
+    height: 700px;
+  }
+}
+
+// ---- About Section ----
+
+#about {
+  flex-direction: row;
+  justify-content: center;
+
+  .container-vert {
+    margin-left: auto;
+    margin-right: auto;
+    flex: 0 0 50%;
+    margin-top: 4rem;
+
+    h2 {
+      font-size: $fs-header;
+      border-bottom: 1px solid $lm-text-pri;
+    }
+  }
+
+  #about-text {
+    flex-direction: column;
+  }
+}
+
+// ---- Work experience section ----
+
