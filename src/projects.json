@@ -1,0 +1,36 @@
+{
+    "projects": {
+        "project1" : {
+            "name" : "Personal Website",
+            "description" :
+            "This very website! Although it has had many revisions over the years, this current iteration is built for modularity,
+            ease of updating, and is aimed to better represent my current skillsets.",
+            "deployment" : "",
+            "tech_used" : "Linode, Cloudflare, Docker, React, HTML, CSS, TypeScript",
+            "gh_link" : "https://github.com/AidanFarber/portfolilo-site",
+        }
+        "project2" : {
+            "name" : "Pomodoro CLI",
+            "description" : "",
+            "deployment" : "",
+            "tech_used" : "",
+            "gh_link" : "",
+        }
+        "project3" : {
+            "name" : "MKPROJ",
+            "description" : "",
+            "deployment" : "",
+            "tech_used" : "",
+            "gh_link" : "",
+        }
+        "project4" : {
+            "name" : "Poke.cli",
+            "description" : "A currently in progress project in which I've created a simple REST API that listens for incoming requests for, say a particular pokemon from the
+                            popular Nintendo game Pokemon, and returns statistics or an ascii image of them as requested.",
+            "deployment" : "",
+            "tech_used" : "",
+            "gh_link" : "",
+        }
+
+    }
+}

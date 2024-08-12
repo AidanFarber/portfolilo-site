@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.tsx'
 
 // import 'projects.json'
 
+
 function openNav() {
     document.getElementById("navbar").style.width = "251px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -40,19 +41,18 @@ function App() {
                     <div id='upper-content' className='container-vert'>
                         <h2>Hobbies</h2>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Photography</li>
+                            <li>Woodworking</li>
+                            <li>Programming</li>
                         </ul>
                     </div>
                     <div id='lower-content' className='container-vert'>
                         <h2>Social Links</h2>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li><img src="" alt="LinkedIn" /></li>
+                            <li><img src="" alt="Instagram" /></li>
+                            <li><img src="" alt="GitHub" /></li>
                         </ul>
-
                     </div>
                 </div>
             </div>
