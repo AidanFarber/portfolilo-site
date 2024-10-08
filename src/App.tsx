@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './styles/index.css'
 import Navbar from './components/Navbar.tsx'
 
@@ -6,10 +6,9 @@ import Navbar from './components/Navbar.tsx'
 
 
 function openNav() {
-    document.getElementById("navbar").style.width = "251px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("navbar")!.style.width = "251px";
+    document.getElementById("main")!.style.marginLeft = "250px";
 }
-
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
                     </div>
                 </div>
                 <div className='content-half intro-picture'>
-                    <img src="../public/me_n_bee.JPEG" alt="" />
+                    <img src="/me_n_bee.JPEG" alt="" />
                 </div>
             </div>
             <hr className='content-hr' />
@@ -62,7 +61,6 @@ function App() {
             </div>
             <hr className='content-hr' />
             <div className='content-container' id='projects'>
-
             </div>
             <footer>
                 <address>
